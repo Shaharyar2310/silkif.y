@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Silkify Image Styler</title>
+  <link rel="stylesheet" href="styles/style3.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-top">
+    <img src="logo.png" alt="Logo silkify">
+    <h3>Navigation</h3>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Tools</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+    <h3>AI Tools</h3>
+    <ul>
+      <li><a href="page3.html">Style Transfer</a></li>
+      <li><a href="page1.html">Image Enhancer</a></li>
+      <li><a href="page2.html">Prompt Generator</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-bottom">
+    <div class="guest">Logged in as: Guest</div>
+    <button id="loginButton" onclick="toggleLogin()">Login</button>
+    <div class="toggle-container">
+      <label>🌞 / 🌚</label>
+      <label class="toggle-switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-header">
+    <div class="logo">Silkify</div>
+    <div class="menu-toggle" onclick="toggleMobileMenu()">☰</div>
+</div>
+  
+<div id="mobileMenu" class="mobile-menu">
+    <a href="#">Home</a>
+    <a href="#">Tools</a>
+    <a href="#">Pricing</a>
+    <a href="#">About</a>
+    <hr>
+    <a href="page3.html">Style Transfer</a>
+    <a href="page1.html">Image Enhancer</a>
+    <a href="page2.html">Prompt Generator</a>
+</div>
+  
+<div class="main-content">
+  <div class="card">
+    <h2 style="margin-bottom: 20px;">Upload or Drop Your Image</h2>
+    <label class="upload-area" id="uploadArea" for="imageUpload" style="display: flex; flex-direction: column; align-items: center;">
+      <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 16v1a1 1 0 001 1h3m10-2a1 1 0 001-1v-1M12 12v4m0 0l-3-3m3 3l3-3M12 4v8"/>
+      </svg>
+      Drag & Drop or Click to Upload
+    </label>
+    <input type="file" id="imageUpload" accept="image/*" onchange="handleFileUpload(event)">
+    <button onclick="resetImage()" style="margin-top: 10px;">Reset</button>
+    <button onclick="downloadImage()" style="margin-top: 10px;">Download</button>
+
+    <div class="style-options">
+      <button onclick="applyStyle(this, 'ghibli')">Ghibli Art</button>
+      <button onclick="applyStyle(this, 'anime')">Anime Pop</button>
+      <button onclick="applyStyle(this, 'sketch')">Sketch</button>
+      <button onclick="applyStyle(this, 'bw')">Black & White</button>
+      <button onclick="applyStyle(this, 'warm')">Warm Tone</button>
+      <button onclick="applyStyle(this, 'neon')">Sci-Fi Neon</button>
+      <button onclick="applyStyle(this, 'cyberpunk')">Cyberpunk</button>
+    </div>
+
+    <div style="margin-top: 40px;">
+      <img src="https://via.placeholder.com/600x400?text=Upload+Preview" id="previewImage" class="preview-img" alt="Preview">
+    </div>
+  </div>
+</div>
+
+<div class="history-bar">
+  <h3>History</h3>
+  <ul id="historyList"></ul>
+</div>
+
+<script src="scripts/script3.js"></script>
+
+</body>
+</html>

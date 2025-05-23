@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Silkify Image Generator</title>
+  <link rel="stylesheet" href="styles/style2.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-top">
+    <img src="logo.png" alt="Logo silkify" />
+    <h3>Navigation</h3>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Tools</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+    <h3>AI Tools</h3>
+    <ul>
+      <li><a href="page3.html">Style Transfer</a></li>
+      <li><a href="page1.html">Image Enhancer</a></li>
+      <li><a href="page2.html" class="active">Prompt Generator</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-bottom">
+    <div class="guest">Guest</div>
+    <button>Login</button>
+    <div class="toggle-container">
+      <label for="darkModeToggle">Dark Mode</label>
+      <div class="toggle-switch">
+        <input type="checkbox" id="darkModeToggle" />
+        <span class="slider"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-header">
+  <div>Silkify</div>
+  <div class="menu-toggle" id="menuToggle">&#9776;</div>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#">Home</a>
+  <a href="#">Tools</a>
+  <a href="#">Pricing</a>
+  <a href="#">About</a>
+  <hr />
+  <a href="page3.html">Style Transfer</a>
+  <a href="page1.html">Image Enhancer</a>
+  <a href="page2.html">Prompt Generator</a>
+</div>
+
+<div class="main-content">
+  <div class="card">
+    <h2>Generate Image from Text Prompt</h2>
+    <textarea id="promptInput" class="prompt-input" placeholder="Enter your prompt here..."></textarea>
+    <button onclick="generateImage()">Generate Image</button>
+
+    <div class="output-area" id="imageOutputArea" style="display: none;">
+      <h3>Generated Image:</h3>
+      <div class="generated-output">
+        <img id="generatedImage" alt="Generated image will appear here" style="max-width: 100%; border-radius: 10px; border: 2px solid var(--button-bg);" />
+        <button id="viewBtn" style="display:none;">View Image</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="history-bar">
+  <h3>Prompt History</h3>
+  <ul id="historyList"></ul>
+</div>
+
+<script src="scripts/script2.js"></script>
+
+</body>
+</html>
